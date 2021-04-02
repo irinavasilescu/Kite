@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
@@ -96,7 +96,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function StickyHeadTable(props) {
+export default function Spots(props) {
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -110,6 +110,12 @@ export default function StickyHeadTable(props) {
         setRowsPerPage(+event.target.value);
         setPage(0);
     };
+
+    useEffect(() => {
+        fetch('https://606640abb8fbbd0017568325.mockapi.io/spot')
+            .then(response => response.json())
+            .then(data => console.log('DATA', data));
+    }, []);
 
     return (
         <Drawer variant="permanent" 
