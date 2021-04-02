@@ -10,9 +10,9 @@ function Map(props) {
     }, [drawerOpened])
     
     return (
-        <div style={{border: "1px solid var(--ifm-color-emphasis-200)", position: "relative", padding: "1rem", borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}}> 
+        <div style={{position: "relative", overflow: "hidden"}}> 
             <div>
-                <MapContainer style={{width: "100vw", height: "100vh"}} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+                <MapContainer style={{width: "90vw", height: "95vh"}} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
                     <TileLayer
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
