@@ -3,8 +3,7 @@ import clsx from 'clsx';
 import Drawer from '@material-ui/core/Drawer';
 import { makeStyles } from '@material-ui/core/styles';
 
-const drawerWidth = '50vw';
-
+const drawerWidth = '100vw';
 const useStyles = makeStyles((theme) => ({
     drawer: {
         width: drawerWidth,
@@ -39,7 +38,7 @@ export default function Spots(props) {
                 className={clsx(classes.drawer, {[classes.drawerOpen]: open, [classes.drawerClose]: !open})}
                 classes={{paper: clsx({[classes.drawerOpen]: open, [classes.drawerClose]: !open})}}
         >        
-            <div style={{backgroundColor: 'yellow', width: '100vw', height: '100vh'}}></div>
+            <div style={{backgroundColor: '#2a6049', width: '100vw', height: '100vh'}}></div>
         </Drawer>
     )
 }

@@ -11,6 +11,8 @@ function Map(props) {
     
     return (
         <div>
+            {/* 
+            NOT SURE I STILL WANT THIS HERE. I'LL THINK ABOUT IT.
             { 
                 drawerOpened === 'true' ? 
                 <div style={{
@@ -24,8 +26,7 @@ function Map(props) {
                 </div>
                 :
                 null
-            }
-
+            } */}
             <MapContainer style={{height: '100vh'}} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
                 <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
