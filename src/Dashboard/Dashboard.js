@@ -112,12 +112,12 @@ export default function MiniDrawer() {
                 <List button>
                     <ListItem>
                         <ListItemIcon>
-                            <ExploreIcon />
+                            <ExploreIcon id="explore-icon" onClick={!open ? handleDrawerOpen : null}/>
                         </ListItemIcon>
                     </ListItem>
                     <ListItem>
                         <ListItemIcon>
-                            <FavoriteIcon />
+                            <FavoriteIcon id="favorite-icon" onClick={!open ? handleDrawerOpen : null}/>
                         </ListItemIcon>
                     </ListItem>
                 </List>
