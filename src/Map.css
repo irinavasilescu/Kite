@@ -1,0 +1,5 @@
+/* Leaflet related */
+
+.leaflet-container {
+    position: unset !important;
+}

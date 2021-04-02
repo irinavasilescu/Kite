@@ -1,10 +1,10 @@
 import './App.css';
-import Map from './Map';
+import Dashboard from './Dashboard';
 
 function App() {
     return (
         <div>
-            <Map/>
+            <Dashboard />
         </div>
     );
 }
