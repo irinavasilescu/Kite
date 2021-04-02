@@ -19,6 +19,7 @@ import './Dashboard.css';
 
 // Components
 import Map from '../Map/Map';
+import Spots from '../Spots/Spots';
 
 const drawerWidth = '50vw';
 
@@ -76,47 +77,48 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function MiniDrawer() {
+export default function Dashboard() {
     const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
 
-    const handleDrawerOpen = () => {
-        setOpen(true);
+    const [openSpots, setOpenSpots] = React.useState(false);
+    const handleDrawerOpenSpots = () => {
+        setOpenSpots(true);
     };
-
-    const handleDrawerClose = () => {
-        setOpen(false);
+    const handleDrawerCloseSpots = () => {
+        setOpenSpots(false);
     };
 
     return (
         <div className={classes.root}>
             <CssBaseline />
-            <Drawer variant="permanent" 
-                    className={clsx(classes.drawer, {[classes.drawerOpen]: open, [classes.drawerClose]: !open})}
-                    classes={{paper: clsx({[classes.drawerOpen]: open, [classes.drawerClose]: !open})}}
-            >
+            <div style={{backgroundColor: '#2a6049', zIndex: '2000'}}>
                 <div className={classes.toolbar}>
-                    <IconButton onClick={open ? handleDrawerClose : handleDrawerOpen}>
-                        {open ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
+                    <IconButton onClick={openSpots ? handleDrawerCloseSpots : handleDrawerOpenSpots}>
+                        {openSpots ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
                     </IconButton>
                 </div>
                 <List button>
                     <ListItem>
                         <ListItemIcon>
-                            <ExploreIcon id="explore-icon" onClick={!open ? handleDrawerOpen : null}/>
+                            <ExploreIcon id="explore-icon" onClick={!openSpots ? handleDrawerOpenSpots : null}/>
                         </ListItemIcon>
                     </ListItem>
                     <ListItem>
                         <ListItemIcon>
-                            <FavoriteIcon id="favorite-icon" onClick={!open ? handleDrawerOpen : null}/>
+                            <FavoriteIcon id="favorite-icon" onClick={!openSpots ? handleDrawerOpenSpots : null}/>
                         </ListItemIcon>
                     </ListItem>
                 </List>
+            </div>
+            <Drawer variant="permanent" 
+                    className={clsx(classes.drawer, {[classes.drawerOpen]: openSpots, [classes.drawerClose]: !openSpots})}
+                    classes={{paper: clsx({[classes.drawerOpen]: openSpots, [classes.drawerClose]: !openSpots})}}
+            >
+                <Spots/>
             </Drawer>
             <main className={classes.content}>
-                <div className={classes.toolbar} />
-                <Map drawerOpened={open.toString()}/>
-            </main>
+                    <Map drawerOpened={openSpots.toString()}/>
+                </main>
         </div>
     );
 }
