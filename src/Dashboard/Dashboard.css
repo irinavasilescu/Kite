@@ -12,21 +12,10 @@
     justify-content: center !important;
 }
 
-.MuiListItem-gutters {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
-}
-
-.MuiListItem-root {
-    padding-top: 16px !important;
-    padding-bottom: 16px !important;
-    cursor: pointer;
-}
-
 .makeStyles-content-9 {
     padding: 0 !important;
 }
 
-.makeStyles-drawerClose-8 {
-    width: 75px !important;
+.makeStyles-drawerClose-7 {
+    width: 0 !important;
 }
