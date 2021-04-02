@@ -3,3 +3,8 @@
 .MuiAppBar-colorPrimary {
     background-color: #2a6049 !important;
 }
+
+.MuiPaper-root {
+    background-color: #2a6049 !important;
+    box-shadow: none !important;
+}
