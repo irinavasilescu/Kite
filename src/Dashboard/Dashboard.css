@@ -1,12 +1,7 @@
 /* Material UI related */
 
-.MuiPaper-root {
-    background-color: #2a6049 !important;
-    box-shadow: none !important;
-}
-
 .MuiSvgIcon-root {
-    color: #cac386;
+    color: white;
 }
 
 .MuiIconButton-root {

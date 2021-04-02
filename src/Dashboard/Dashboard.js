@@ -39,7 +39,7 @@ export default function Dashboard() {
     };
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} style={{overflowX: 'hidden', overflowY: 'hidden'}}>
             <CssBaseline />
             
             {/* NAVIGATION */}
