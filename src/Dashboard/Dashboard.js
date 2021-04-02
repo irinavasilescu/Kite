@@ -18,7 +18,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import './Dashboard.css';
 
 // Components
-import Map from './Map';
+import Map from '../Map/Map';
 
 const drawerWidth = 240;
 
