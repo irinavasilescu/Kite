@@ -20,7 +20,7 @@ import './Dashboard.css';
 // Components
 import Map from '../Map/Map';
 
-const drawerWidth = '30vw';
+const drawerWidth = '50vw';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -70,14 +70,6 @@ const useStyles = makeStyles((theme) => ({
             width: theme.spacing(9) + 1,
         },
     },
-    toolbar: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        padding: theme.spacing(0, 1),
-        // necessary for content to be below app bar
-        ...theme.mixins.toolbar,
-    },
     content: {
         flexGrow: 1,
         padding: theme.spacing(3),
@@ -86,7 +78,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MiniDrawer() {
     const classes = useStyles();
-    const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
     const handleDrawerOpen = () => {
@@ -124,7 +115,7 @@ export default function MiniDrawer() {
             </Drawer>
             <main className={classes.content}>
                 <div className={classes.toolbar} />
-                <Map />
+                <Map drawerOpened={open.toString()}/>
             </main>
         </div>
     );
