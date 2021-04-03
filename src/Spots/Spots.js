@@ -129,7 +129,7 @@ export default function Spots(props) {
                             <TableRow>
                                 {columns.map((column) => (
                                     <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }} onClick={() => { sortSpots(column) }}>
-                                        {column.label}
+                                        <span style={{color: '#32795a'}}><strong>{column.label}</strong></span>
                                     </TableCell>
                                 ))}
                             </TableRow>

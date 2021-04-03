@@ -1,3 +1,7 @@
+.tableLabel {
+    color: '#32795a';
+}
+
 .MuiTableCell-root {
     border-bottom: 0px !important;
 }
@@ -8,4 +12,20 @@
 
 .MuiTableRow-root:nth-child(2n) {
     background: #f0fff3;
+}
+
+.MuiTablePagination-menuItem:nth-child(2n) {
+    background: #f0fff3;
+}
+
+.MuiTablePagination-menuItem:hover {
+    background-color: #e0ffe7 !important;
+}
+
+.MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
+    background-color: #e0ffe7 !important;
+}
+
+.MuiTablePagination-select {
+    background: #f0fff3 !important;
 }
