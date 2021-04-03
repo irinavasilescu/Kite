@@ -1,0 +1,11 @@
+.MuiTableCell-root {
+    border-bottom: 0px !important;
+}
+
+.MuiTableRow-root:hover {
+    background-color: #e0ffe7 !important;
+}
+
+.MuiTableRow-root:nth-child(2n) {
+    background: #f0fff3;
+}
