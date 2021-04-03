@@ -10,7 +10,7 @@ function Map(props) {
     }, [drawerOpened])
     
     return (
-        <div style={{position: "relative", overflow: "hidden"}}> 
+        <div style={{position: "relative", overflow: "hidden",  borderRadius: "15px"}}> 
             <div>
                 <MapContainer style={{width: "90vw", height: "95vh"}} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
                     <TileLayer

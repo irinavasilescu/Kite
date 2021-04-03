@@ -8,6 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
+import spotsHeader from '../assets/spots_header.png';
 
 import clsx from 'clsx';
 import Drawer from '@material-ui/core/Drawer';
@@ -110,6 +111,7 @@ export default function Spots(props) {
                         className={clsx(classes.drawer, {[classes.drawerOpen]: open, [classes.drawerClose]: !open})}
                         classes={{paper: clsx({[classes.drawerOpen]: open, [classes.drawerClose]: !open})}}
         >
+            <img src={spotsHeader} />
             <div style={{marginLeft: "110px", marginRight: "25px"}}>
                 <Paper className={classes.root}>
                     <TableContainer className={classes.container}>
