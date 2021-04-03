@@ -15,7 +15,6 @@ import Drawer from '@material-ui/core/Drawer';
 import './Spots.css';
 
 const drawerWidth = '100vw';
-
 const columns = [
     { 
         id: 'name', 
@@ -97,6 +96,16 @@ export default function Spots(props) {
         setPage(0);
     };
 
+    const sortSpots = (column) => {
+        let spotsClone = spots.slice(0);
+        spotsClone = spotsClone.sort((a, b) => {
+            if (a[column.id] < b[column.id]) { return -1 } 
+            if (a[column.id] > b[column.id]) { return 0  }
+            return 0;
+        })
+        setSpots(spotsClone)
+    }
+
     useEffect(() => {
         fetch('https://606640abb8fbbd0017568325.mockapi.io/spot')
             .then(response => response.json())
@@ -119,7 +128,7 @@ export default function Spots(props) {
                         <TableHead>
                             <TableRow>
                                 {columns.map((column) => (
-                                    <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
+                                    <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }} onClick={() => { sortSpots(column) }}>
                                         {column.label}
                                     </TableCell>
                                 ))}
