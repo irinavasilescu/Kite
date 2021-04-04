@@ -6,8 +6,9 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 // Icons
-import ExploreIcon from '@material-ui/icons/Explore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import AddLocationIcon from '@material-ui/icons/AddLocation';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 // Styles
 import './Dashboard.css';
@@ -45,14 +46,19 @@ export default function Dashboard() {
             {/* NAVIGATION */}
             <div style={{backgroundColor: '#2a6049', zIndex: '2000'}}>
                 <List button>
-                    <ListItem>
+                    <ListItem style={{paddingTop: '20px', paddingBottom: '20px', cursor: 'pointer'}}>
                         <ListItemIcon>
-                            <ExploreIcon id="explore-icon" onClick={!openSpots ? handleDrawerOpenSpots : handleDrawerCloseSpots}/>
+                            <LocationOnIcon fontSize={'large'} id="explore-icon" onClick={!openSpots ? handleDrawerOpenSpots : handleDrawerCloseSpots}/>
                         </ListItemIcon>
                     </ListItem>
-                    <ListItem>
+                    <ListItem style={{paddingTop: '20px', paddingBottom: '20px', cursor: 'pointer'}}>
                         <ListItemIcon>
-                            <FavoriteIcon id="favorite-icon" />
+                            <AddLocationIcon fontSize={'large'} id="favorite-icon" />
+                        </ListItemIcon>
+                    </ListItem>
+                    <ListItem style={{paddingTop: '20px', paddingBottom: '20px', cursor: 'pointer'}}>
+                        <ListItemIcon>
+                            <FavoriteIcon fontSize={'large'} id="favorite-icon" />
                         </ListItemIcon>
                     </ListItem>
                 </List>
